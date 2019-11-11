@@ -50,3 +50,11 @@
 textarea {
     min-height: 200px;
 }
+
+#notePhoto {
+    width: 30px;
+}
+
+#photosPhoto {
+    width: 30px;
+}

@@ -55,50 +55,20 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">11 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
-                                data-target="#addModal">
-                                Add <i class="fas fa-plus-circle"></i>
+                            <button type="button" class="btn btn-secondary btn-sm add" id="notes" data-toggle="modal"
+                                data-target="#notesModal">
+                                Notes <i class="fas fa-plus-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm add" id="budget" data-toggle="modal"
+                                data-target="#budgetModal">
+                                Budget <i class="fas fa-plus-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm add" id="photos" data-toggle="modal"
+                                data-target="#photosModal">
+                                Photos <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row" class="text-center align-middle">12 Dec</th>
-                        <td class="align-middle">
-                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
-                                data-target="#addModal">
-                                Add <i class="fas fa-plus-circle"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center align-middle">13 Dec</th>
-                        <td class="align-middle">
-                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
-                                data-target="#addModal">
-                                Add <i class="fas fa-plus-circle"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center align-middle">14 Dec</th>
-                        <td class="align-middle">
-                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
-                                data-target="#addModal">
-                                Add <i class="fas fa-plus-circle"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center align-middle">15 Dec</th>
-                        <td class="align-middle">
-                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
-                                data-target="#addModal">
-                                Add <i class="fas fa-plus-circle"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-
                 </tbody>
             </table>
 
@@ -179,8 +149,13 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addNote"
-                            name="post">Add</button>
+                        <form id="formNote">
+
+                            <button type="submit" class="btn btn-info submitAdd" data-dismiss="modal" id="addNote"
+                                name="post">Add</button>
+
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -206,7 +181,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addBudget"
+                        <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addBudget"
                             name="post">Add</button>
                     </div>
                 </div>
@@ -229,41 +204,24 @@
                             <label>Add photos of this day</label>
                             <input type="file" class="form-control" id="photos">
                         </div>
+                        <!-- 
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <input id="upbutton" type="submit" value="Upload" class="input-group-text" disabled>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" multiple class="custom-file-input" name="myfile" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div> -->
+
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addPhotos"
+                        <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addPhotos"
                             name="post">Add</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add Modal -->
-        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-
-                        <button type="button" class="btn btn-info btn-block add-choice" id="notes" name="notes"
-                            data-dismiss="modal" data-toggle="modal" data-target="#notesModal">Νotes</button>
-
-                        <button type="button" class="btn btn-info btn-block add-choice" id="budget" name="budget"
-                            data-dismiss="modal" data-toggle="modal" data-target="#budgetModal">Budget</button>
-
-                        <button type="button" class="btn btn-info btn-block add-choice" id="photos" name="photos"
-                            data-dismiss="modal" data-toggle="modal" data-target="#photosModal">Photos</button>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" name="close">Close</button>
                     </div>
                 </div>
             </div>
