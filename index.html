@@ -55,7 +55,8 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">11 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addModal">
+                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
+                                data-target="#addModal">
                                 Add <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
@@ -63,7 +64,8 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">12 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addModal">
+                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
+                                data-target="#addModal">
                                 Add <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
@@ -71,7 +73,8 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">13 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addModal">
+                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
+                                data-target="#addModal">
                                 Add <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
@@ -79,7 +82,8 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">14 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addModal">
+                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
+                                data-target="#addModal">
                                 Add <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
@@ -87,11 +91,13 @@
                     <tr>
                         <th scope="row" class="text-center align-middle">15 Dec</th>
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addModal">
+                            <button type="button" class="btn btn-secondary add" data-toggle="modal"
+                                data-target="#addModal">
                                 Add <i class="fas fa-plus-circle"></i>
                             </button>
                         </td>
                     </tr>
+
 
                 </tbody>
             </table>
@@ -131,16 +137,104 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Share your trip with other travellers</label>
-                            <input type="text" class="form-control" placeholder="Post Title">
+                            <input type="text" class="form-control" placeholder="Post Title" id="postTitle">
                         </div>
                         <div class="form-group">
                             <label>Post Body</label>
-                            <textarea name="editor1" class="form-control" placeholder="Post Body"></textarea>
+                            <textarea name="postBody" class="form-control" placeholder="Post Body"
+                                id="postBody"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-info">Post</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            name="cancel">Cancel</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addPost">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes Modal -->
+        <div class="modal fade" id="notesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add a note</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Add title</label>
+                            <input type="text" class="form-control" placeholder="Note Title" id="noteTitle">
+                        </div>
+                        <div class="form-group">
+                            <label>Note Body</label>
+                            <textarea name="noteBody" class="form-control" placeholder="Note Body"
+                                id="noteBody"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            name="cancel">Cancel</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addNote"
+                            name="post">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Modal -->
+        <div class="modal fade" id="budgetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add budget</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Add the budget of this day</label>
+                            <input type="text" class="form-control" placeholder="Budget" id="budget">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            name="cancel">Cancel</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addBudget"
+                            name="post">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photos Modal -->
+        <div class="modal fade" id="photosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Add photos of this day</label>
+                            <input type="file" class="form-control" id="photos">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            name="cancel">Cancel</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addPhotos"
+                            name="post">Add</button>
                     </div>
                 </div>
             </div>
@@ -158,12 +252,18 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <button type="button" class="btn btn-info btn-block" id="notes">Νotes</button>
-                        <button type="button" class="btn btn-info btn-block" id="budget">Budget</button>
-                        <button type="button" class="btn btn-info btn-block" id="photos">Photos</button>
+
+                        <button type="button" class="btn btn-info btn-block add-choice" id="notes" name="notes"
+                            data-dismiss="modal" data-toggle="modal" data-target="#notesModal">Νotes</button>
+
+                        <button type="button" class="btn btn-info btn-block add-choice" id="budget" name="budget"
+                            data-dismiss="modal" data-toggle="modal" data-target="#budgetModal">Budget</button>
+
+                        <button type="button" class="btn btn-info btn-block add-choice" id="photos" name="photos"
+                            data-dismiss="modal" data-toggle="modal" data-target="#photosModal">Photos</button>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" name="close">Close</button>
                     </div>
                 </div>
             </div>
@@ -173,9 +273,6 @@
 
     <scripts>
 
-        <script>
-            CKEDITOR.replace('editor1');
-        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
