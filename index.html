@@ -54,19 +54,54 @@
                 <tbody>
                     <tr>
                         <th scope="row" class="text-center align-middle">11 Dec</th>
+
                         <td class="align-middle">
-                            <button type="button" class="btn btn-secondary btn-sm add" id="notes" data-toggle="modal"
-                                data-target="#notesModal">
-                                Notes <i class="fas fa-plus-circle"></i>
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm add" id="budget" data-toggle="modal"
-                                data-target="#budgetModal">
-                                Budget <i class="fas fa-plus-circle"></i>
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm add" id="photos" data-toggle="modal"
-                                data-target="#photosModal">
-                                Photos <i class="fas fa-plus-circle"></i>
-                            </button>
+
+                            <div class="row">
+
+                                <div class="col-8 d-flex align-items-center">
+
+                                    <div class="col-2">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="notes"
+                                            data-toggle="modal" data-target="#notesModal">
+                                            Notes <i class="fas fa-plus-circle"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="col-10 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="budget"
+                                            data-toggle="modal" data-target="#budgetModal">
+                                            Budget <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="photos"
+                                            data-toggle="modal" data-target="#photosModal">
+                                            Photos <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -181,8 +216,10 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addBudget"
-                            name="post">Add</button>
+                        <form id="formBudget">
+                            <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addBudget"
+                                name="post">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -220,8 +257,11 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addPhotos"
-                            name="post">Add</button>
+                        <form id="formPhotos">
+
+                            <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addPhotos"
+                                name="post">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>

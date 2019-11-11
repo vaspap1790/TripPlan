@@ -1,10 +1,11 @@
 
-function addPhotos(e) {
+let clickedBtn = null;
 
-    $("<a href='#'><img id='photosPhoto' src='https://gitlab.gnome.org/uploads/-/system/project/avatar/295/gnome-photos.png'></a>").appendTo(e.target.parentElement);
+$('#formPhotos').click(function () {
 
-};
+    $(clickedBtn.currentTarget.parentElement).next().append("<a href='#'><img id='photosPhoto' src='https://gitlab.gnome.org/uploads/-/system/project/avatar/295/gnome-photos.png'></a>");
 
+});
 
 function addPost(e) {
 
@@ -13,57 +14,30 @@ function addPost(e) {
 
 };
 
-function addBudget(e) {
+$('#formBudget').click(function () {
 
     const budget = $("#budgetModal #budget").val().trim();
+    console.log(budget);
 
-};
+    $(clickedBtn.currentTarget.parentElement).next().append(budget + '&euro;');
 
-function addNote(e) {
-    $("<a href='#'><img id='notePhoto' src='https://icon-library.net/images/icon-note/icon-note-0.jpg'></a>").appendTo(e.target.parentElement);
-};
+});
 
-function clicked() {
-    console.log("clicked");
 
-};
+$('#formNote').click(function () {
 
-$("#addNote").click(clicked);
-
-function handleNote(e) {
+    $(clickedBtn.currentTarget.parentElement).next().append("<a href='#'><img id='notePhoto' src='https://icon-library.net/images/icon-note/icon-note-0.jpg'></a>");
 
     const title = $("#notesModal #noteTitle").val().trim();
     const body = $("#notesModal #noteBody").val().trim();
-    console.log(title, body);
 
-
-    $('#formNote').click(function () {
-        console.log(e.target.parentElement);
-
-        // $("<a href='#'><img id='notePhoto' src='https://icon-library.net/images/icon-note/icon-note-0.jpg'></a>").appendTo(e.target.parentElement);
-        e.target.parentElement.insertAdjacentHTML("afterend", "<a href='#'><img id='notePhoto' src='https://icon-library.net/images/icon-note/icon-note-0.jpg'></a>");
-    });
-
-};
+});
 
 
 $(document).ready(function () {
 
     $(".add").click(function (e) {
-
-        const choice = this.id;
-        switch (choice) {
-            case "photos":
-                addPhotos(e);
-                break;
-            case "notes":
-                handleNote(e);
-                break;
-            case "budget":
-                addBudget(e);
-                break;
-        }
-
+        clickedBtn = e;
     });
 
 
