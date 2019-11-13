@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="App">
 
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,11 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
 
     <!-- Photo container -->
     <div class="container-fluid" id="up">
@@ -84,7 +84,215 @@
                                         </button>
                                     </div>
 
+                                    <div class="col-3 d-flex justify-content-center budget"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="photos"
+                                            data-toggle="modal" data-target="#photosModal">
+                                            Photos <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
                                     <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center align-middle">12 Dec</th>
+
+                        <td class="align-middle">
+
+                            <div class="row">
+
+                                <div class="col-8 d-flex align-items-center">
+
+                                    <div class="col-2">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="notes"
+                                            data-toggle="modal" data-target="#notesModal">
+                                            Notes <i class="fas fa-plus-circle"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="col-10 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="budget"
+                                            data-toggle="modal" data-target="#budgetModal">
+                                            Budget <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center budget"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="photos"
+                                            data-toggle="modal" data-target="#photosModal">
+                                            Photos <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center align-middle">13 Dec</th>
+
+                        <td class="align-middle">
+
+                            <div class="row">
+
+                                <div class="col-8 d-flex align-items-center">
+
+                                    <div class="col-2">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="notes"
+                                            data-toggle="modal" data-target="#notesModal">
+                                            Notes <i class="fas fa-plus-circle"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="col-10 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="budget"
+                                            data-toggle="modal" data-target="#budgetModal">
+                                            Budget <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center budget"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="photos"
+                                            data-toggle="modal" data-target="#photosModal">
+                                            Photos <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center align-middle">14 Dec</th>
+
+                        <td class="align-middle">
+
+                            <div class="row">
+
+                                <div class="col-8 d-flex align-items-center">
+
+                                    <div class="col-2">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="notes"
+                                            data-toggle="modal" data-target="#notesModal">
+                                            Notes <i class="fas fa-plus-circle"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="col-10 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="budget"
+                                            data-toggle="modal" data-target="#budgetModal">
+                                            Budget <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center budget"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="photos"
+                                            data-toggle="modal" data-target="#photosModal">
+                                            Photos <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center"></div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center align-middle">15 Dec</th>
+
+                        <td class="align-middle">
+
+                            <div class="row">
+
+                                <div class="col-8 d-flex align-items-center">
+
+                                    <div class="col-2">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="notes"
+                                            data-toggle="modal" data-target="#notesModal">
+                                            Notes <i class="fas fa-plus-circle"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="col-10 d-flex justify-content-center"></div>
+
+                                </div>
+
+                                <div class="col-2 d-flex align-items-center">
+
+                                    <div class="col-9">
+
+                                        <button type="button" class="btn btn-secondary btn-sm add" id="budget"
+                                            data-toggle="modal" data-target="#budgetModal">
+                                            Budget <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-3 d-flex justify-content-center budget"></div>
 
                                 </div>
 
@@ -119,7 +327,7 @@
             </div>
 
             <div class="col-2">
-                <p>Total Budget:</p>
+                <p>Total Budget:<span id="totalBudget">0</span></p>
             </div>
 
         </div>
@@ -153,7 +361,10 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" id="addPost">Post</button>
+                        <form id="formPost">
+                            <button type="button" class="btn btn-info" data-dismiss="modal" id="addPost"
+                                ng-click="addPost()">Post</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -187,7 +398,7 @@
                         <form id="formNote">
 
                             <button type="submit" class="btn btn-info submitAdd" data-dismiss="modal" id="addNote"
-                                name="post">Add</button>
+                                name="post" ng-click="addNote()">Add</button>
 
                         </form>
 
@@ -218,7 +429,7 @@
                             name="cancel">Cancel</button>
                         <form id="formBudget">
                             <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addBudget"
-                                name="post">Add</button>
+                                name="post" ng-click="addBudget()">Add</button>
                         </form>
                     </div>
                 </div>
@@ -241,26 +452,13 @@
                             <label>Add photos of this day</label>
                             <input type="file" class="form-control" id="photos">
                         </div>
-                        <!-- 
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <input id="upbutton" type="submit" value="Upload" class="input-group-text" disabled>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" multiple class="custom-file-input" name="myfile" id="customFile">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                        </div> -->
-
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             name="cancel">Cancel</button>
-                        <form id="formPhotos">
-
+                        <form id="formPhotos" enctype="multipart/form-data" method="POST">
                             <button type="button" class="btn btn-info submitAdd" data-dismiss="modal" id="addPhotos"
-                                name="post">Add</button>
+                                name="photo">Add</button>
                         </form>
                     </div>
                 </div>
@@ -274,6 +472,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
